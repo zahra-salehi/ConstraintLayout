@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:paddingBottom="8dp"
+        tools:context=".MainActivity">
+
+        <ImageView
+                android:id="@+id/ivotp"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/circle"
+                app:layout_constraintBottom_toTopOf="@+id/guideline1"
+                app:layout_constraintEnd_toStartOf="@+id/guideline"
+                app:layout_constraintStart_toStartOf="@+id/guideline"
+                app:layout_constraintTop_toTopOf="@+id/guideline1" />
+        <ImageView
+                android:id="@+id/ivseconddiv"
+                android:layout_width="76dp"
+                android:layout_height="2dp"
+                android:background="@drawable/strokedivider"
+                android:layerType="software"
+                app:layout_constraintBottom_toBottomOf="@+id/ivotp"
+                app:layout_constraintStart_toEndOf="@+id/ivotp"
+                app:layout_constraintTop_toTopOf="@+id/ivotp" />
+        <ImageView
+                android:id="@+id/ivfirstdiv"
+                android:layout_width="76dp"
+                android:layout_height="2dp"
+                android:layerType="software"
+                android:src="@drawable/strokedivider"
+                app:layout_constraintBottom_toBottomOf="@+id/ivotp"
+                app:layout_constraintEnd_toStartOf="@+id/ivotp"
+                app:layout_constraintTop_toTopOf="@+id/ivotp"/>
+        <ImageView
+                android:id="@+id/ivnumberfill"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                app:layout_constraintBottom_toBottomOf="@+id/ivfirstdiv"
+                app:layout_constraintEnd_toStartOf="@+id/ivfirstdiv"
+                app:layout_constraintTop_toTopOf="@+id/ivfirstdiv"
+                app:srcCompat="@drawable/airplane" />
+        <ImageView
+                android:id="@+id/ivprofile"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_toRightOf="@+id/ivseconddiv"
+                android:background="@drawable/circle"
+                app:layout_constraintBottom_toBottomOf="@+id/ivseconddiv"
+                app:layout_constraintStart_toEndOf="@+id/ivseconddiv"
+                app:layout_constraintTop_toTopOf="@+id/ivseconddiv" />
+        <TextView
+                android:id="@+id/tvnumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ivnumberfill"
+                android:layout_marginTop="4dp"
+                android:text="Mobile Number"
+                android:textColor="?colorAccent"
+                android:textSize="11sp"
+                app:layout_constraintEnd_toEndOf="@id/ivnumberfill"
+                app:layout_constraintStart_toStartOf="@id/ivnumberfill"
+                app:layout_constraintTop_toBottomOf="@id/ivnumberfill" />
+        <TextView
+                android:id="@+id/tvotp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ivnumberfill"
+                android:layout_marginTop="8dp"
+                android:text="OTP"
+                android:textColor="#949595"
+                android:textSize="11sp"
+                app:layout_constraintEnd_toStartOf="@+id/ivseconddiv"
+                app:layout_constraintStart_toStartOf="@+id/ivotp"
+                app:layout_constraintTop_toBottomOf="@+id/ivotp" />
+        <TextView
+                android:id="@+id/tvprofile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ivnumberfill"
+                android:layout_marginTop="8dp"
+                android:text="Profile"
+                android:textColor="#949595"
+                android:textSize="11sp"
+                app:layout_constraintEnd_toEndOf="@+id/ivprofile"
+                app:layout_constraintStart_toStartOf="@+id/ivprofile"
+                app:layout_constraintTop_toBottomOf="@+id/ivprofile" />
+        <android.support.constraint.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+        <android.support.constraint.Guideline
+                android:id="@+id/guideline1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
